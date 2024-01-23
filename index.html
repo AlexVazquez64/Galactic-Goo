@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Galactic Goo</title>
-    <script src="https://cdn.jsdelivr.net/npm/paper@0.12.15/dist/paper-full.min.js"></script>
+    <!-- Elimina la referencia a main.js y paper.js ya que ahora se incluirán mediante Webpack -->
     <style>
       canvas {
         width: 100%;
@@ -13,10 +13,7 @@
   </head>
   <body>
     <canvas id="myCanvas" resize></canvas>
-    <script
-      type="text/paperscript"
-      src="scripts/main.js"
-      canvas="myCanvas"
-    ></script>
+    <!-- Referencia el bundle.js generado por Webpack -->
+    <script src="dist/bundle.js"></script>
   </body>
 </html>
